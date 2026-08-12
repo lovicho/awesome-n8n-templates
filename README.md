@@ -253,13 +253,14 @@ Find 5 database and storage automation templates for n8n. Chat with PostgreSQL u
 
 ### What n8n templates are available for DevOps and server automation?
 
-This section includes 3 DevOps and server automation templates for n8n. Trigger Linux system updates via authenticated webhooks over SSH, control Docker Compose services remotely through HTTP POST requests, or watch disk usage across all mountpoints and get alerted before a full disk takes services down. All templates use SSH for secure server management.
+This section includes 4 DevOps and reliability templates for n8n. Trigger Linux system updates via authenticated webhooks over SSH, control Docker Compose services remotely, watch disk usage across mountpoints, or diagnose failed n8n execution JSON without connecting to a live instance.
 
-| Title | Description | Link |
-|-------|-------------|------|
+| Title | Description | Department | Link |
+|-------|-------------|------------|------|
 | Linux System Update via Webhook | Trigger update & upgrade of your Debian-based server via an authenticated POST request and SSH. | SSH Tools | [Link to Template](devops/linux-update-via-webhook.json)
 | Docker Compose Controller via Webhook | Start or stop Docker Compose services on your server via authenticated HTTP POST request with n8n + SSH. | SSH Tools | [Link to Template](devops/docker-compose-controller.json) |
 | Disk Space Watchdog with Tiered Thresholds | Check disk usage over SSH on a schedule, warn at 80% and 90%, and alert only when a mountpoint changes level - no repeated alerts for the same full disk. Telegram with e-mail fallback. | SSH Tools | [Link to Template](devops/disk-space-watchdog.json) |
+| n8n Failed Execution Doctor | Diagnose exported failed n8n execution data locally, identify the failing node, classify common root causes such as 401/403, 429, timeouts, network, invalid input, and expression errors, and return a focused next diagnostic step. No external API key or LLM required. | Engineering | [Link to Template](devops/n8n-failed-execution-doctor.json) |
 
 > 🚀 **Automate any workflow.** [Create your free n8n account and start building →](https://n8n.partnerlinks.io/h1pwwf5m4toe)
 
@@ -346,6 +347,8 @@ This is the largest category with 17 AI and LLM templates for n8n. Templates inc
 | GCF Token Optimization for LLM Tool Responses | Fetches GitHub contributors, batches into an array, encodes to GCF (Graph Compact Format) for 53-71% fewer tokens, then decodes back to JSON losslessly. Uses the n8n-nodes-gcf community node. | AI/DevOps/Optimization | [Link to Template](OpenAI_and_LLMs/GCF%20Token%20Optimization%20for%20LLM%20Tool%20Responses.json) |
 | n8n + Local LLM (Ollama) Basic Setup | Connect n8n with local LLMs (Llama 3, Mistral, Phi-3) for 100% free AI automation. No API keys required. | AI/Automation | [Link to Template](./OpenAI_and_LLMs/Ollama_Basic_Workflow.json) |
 | DaoXE Multi-Model Chat with Automatic Fallback | Calls a primary model and, if it errors, automatically retries the same prompt on a fallback model — all through one OpenAI-compatible API key (DaoXE gateway). Pure HTTP nodes, so it runs on any n8n version. | AI/Development | [Link to Template](OpenAI_and_LLMs/DaoXE%20Multi-Model%20Chat%20with%20Automatic%20Fallback.json) |
+| YouTube Transcript to Executive Summary (Free) | Fetches a YouTube video transcript and generates a clean 3-5 paragraph executive summary using OpenAI GPT-4o-mini. Webhook-triggered, returns JSON with summary. | Content Creation/AI/Productivity | [Link to Template](OpenAI_and_LLMs/YouTube%20Transcript%20to%20Executive%20Summary%20(Free).json) |
+| AI Stock Image Metadata Generator | Generates title, description, and 20-40 keywords for stock photos using OpenAI Vision. Webhook-triggered, returns CSV-ready metadata. | Content Creation/AI/Photography | [Link to Template](OpenAI_and_LLMs/AI%20Stock%20Image%20Metadata%20Generator.json) |
 
 > 🚀 **Automate any workflow.** [Create your free n8n account and start building →](https://n8n.partnerlinks.io/h1pwwf5m4toe)
 
@@ -393,6 +396,7 @@ This section includes 39 additional n8n integration templates covering a wide ra
 | Title | Description | Department | Link |
 |-------|-------------|------------|------|
 | Extract source-backed company website metadata with Apify | Validates one company domain, runs a cost-capped Apify Actor, and accepts exactly one website-metadata candidate result with provenance for human CRM review. | Sales/Ops | [Link to Template](Other_Integrations_and_Use_Cases/Extract%20source-backed%20company%20website%20metadata%20with%20Apify.json) |
+| Transcribe authorized PT-BR support calls with speaker labels using Apify | Requires an explicit rights-and-consent confirmation, transcribes one public HTTPS recording with diarization under a USD 0.05 run cap, and validates the source-tagged response for human support review. | Support/Ops | [Link to Template](Other_Integrations_and_Use_Cases/Transcribe%20authorized%20PT-BR%20support%20calls%20with%20speaker%20labels%20using%20Apify.json) |
 | Create and send Pennylane invoices from webhook data | Receives validated invoice data through an HTTP Basic Auth-protected webhook, finds or creates the customer in Pennylane, creates a finalized invoice, optionally emails it through Pennylane, and returns the result. | Finance/Ops | [Link to Template](Other_Integrations_and_Use_Cases/Create%20and%20send%20Pennylane%20invoices%20from%20webhook%20data.json) |
 | API Schema Extractor | Extracts API schemas from web services for documentation or integration purposes. | Development/Integration | [Link to Template](Other_Integrations_and_Use_Cases/API%20Schema%20Extractor.json) |
 | Synthetic Candidate Intake Reliability Harness | Runs six credential-free synthetic tests for candidate-intake deduplication, idempotency, partial-failure resume, invalid-input quarantine, and bounded 429 retry behavior. | HR/QA/Workflow Reliability | [Link to Template](Other_Integrations_and_Use_Cases/Synthetic%20Candidate%20Intake%20Reliability%20Harness.json) |
